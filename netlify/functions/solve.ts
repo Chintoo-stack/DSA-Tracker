@@ -1,7 +1,7 @@
 import type { Config, Context } from "@netlify/functions";
 import { and, eq } from "drizzle-orm";
-import { db } from "../../db";
-import { questions, solves } from "../../db/schema";
+import { db } from "./_shared/db";
+import { questions, solves } from "./_shared/schema";
 import { getOrCreateProfile, json, requireUser } from "./_shared/auth";
 
 export default async (_req: Request, context: Context) => {

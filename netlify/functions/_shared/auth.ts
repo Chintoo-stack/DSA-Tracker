@@ -1,8 +1,8 @@
 import { getUser } from "@netlify/identity";
 import { eq } from "drizzle-orm";
-import { db } from "../../db";
-import { profiles } from "../../db/schema";
-import type { Plan } from "../../src/data/catalog";
+import type { Plan } from "./catalog";
+import { db } from "./db";
+import { profiles } from "./schema";
 
 export async function requireUser() {
   const user = await getUser();
