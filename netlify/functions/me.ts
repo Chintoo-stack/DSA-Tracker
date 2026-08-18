@@ -1,8 +1,8 @@
 import type { Config } from "@netlify/functions";
 import { desc, eq } from "drizzle-orm";
-import { db } from "../../db";
-import { questions, solves } from "../../db/schema";
-import { FREE_QUESTION_COUNT, PLUS_QUESTION_COUNT, TOTAL_QUESTION_COUNT } from "../../src/data/catalog";
+import { FREE_QUESTION_COUNT, PLUS_QUESTION_COUNT, TOTAL_QUESTION_COUNT } from "./_shared/catalog";
+import { db } from "./_shared/db";
+import { questions, solves } from "./_shared/schema";
 import { dateKey, getOrCreateProfile, json, requireUser } from "./_shared/auth";
 
 export default async () => {
